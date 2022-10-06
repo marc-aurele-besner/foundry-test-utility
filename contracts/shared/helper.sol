@@ -7,17 +7,17 @@ import { stdCheats as Cheats } from '../utils/stdlib.sol';
 import { Functions } from './functions.sol';
 
 contract Helper is Functions, Cheats {
-    function initialize_helper(uint8 LOG_LEVEL_, TestType testType_) internal virtual {
+    function _initialize_helper(uint8 LOG_LEVEL_, TestType testType_) internal virtual {
         // Deploy contracts
-        initialize_tests(
+        Functions._initialize_tests(
             // Test Settings
             LOG_LEVEL_,
             testType_
         );
     }
 
-    function initialize_helper(uint8 LOG_LEVEL_) internal virtual {
-        initialize_helper(LOG_LEVEL_, TestType.Standard);
+    function _initialize_helper(uint8 LOG_LEVEL_) internal virtual {
+        _initialize_helper(LOG_LEVEL_, TestType.Standard);
     }
 
     function help_changeLogLevel(uint8 newLogLevel_) internal virtual {
