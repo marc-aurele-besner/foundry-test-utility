@@ -17,7 +17,7 @@ contract MockERC1155Test is Helper {
     string constant _TEST_SYMBOL = 'MOCK';
 
     function setUp() public {
-        initialize_helper(LOG_LEVEL);
+        _initialize_helper(LOG_LEVEL);
         // Deploy contracts
         mockERC1155 = new MockERC1155();
     }

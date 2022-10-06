@@ -18,7 +18,7 @@ contract MockERC1155UpgradeableTest is Helper {
     string constant _TEST_URI = 'https://google.com';
 
     function setUp() public {
-        initialize_helper(LOG_LEVEL);
+        _initialize_helper(LOG_LEVEL);
         // Deploy contracts
         mockERC1155Upgradeable = new MockERC1155Upgradeable();
         mockERC1155Upgradeable.initialize(_TEST_NAME, _TEST_SYMBOL, _TEST_URI);
