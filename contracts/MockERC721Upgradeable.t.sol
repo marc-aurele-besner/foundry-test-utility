@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @title MockERC721Upgradeable - Test
  */
 
-import { Helper } from './shared/helper.t.sol';
+import { Helper } from './shared/helper.sol';
 import { MockERC721Upgradeable } from './mock/MockERC721Upgradeable.sol';
 
 contract MockERC721UpgradeableTest is Helper {
