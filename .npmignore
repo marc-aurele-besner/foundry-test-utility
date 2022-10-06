@@ -1,0 +1,4 @@
+contracts/*.t.sol
+.prettierrc
+foundry.toml
+remappings.txt
