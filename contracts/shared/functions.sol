@@ -4,9 +4,9 @@ pragma solidity ^0.8.0;
 import '../utils/console.sol';
 import { CheatCodes } from '../utils/cheatcodes.sol';
 
-import { Constants } from './constants.sol';
-import { Errors } from './errors.sol';
-import { TestStorage } from './testStorage.sol';
+import { Constants } from './Constants.sol';
+import { Errors } from './Errors.sol';
+import { TestStorage } from './TestStorage.sol';
 
 contract Functions is Constants, Errors, TestStorage {
     enum TestType {
@@ -14,7 +14,7 @@ contract Functions is Constants, Errors, TestStorage {
     }
     event InitializingTests(uint8 LOG_LEVEL, TestType testType);
 
-    function initialize_tests(uint8 LOG_LEVEL_, TestType testType_) public virtual {
+    function _initialize_tests(uint8 LOG_LEVEL_, TestType testType_) internal virtual {
         // Set general test settings
         _LOG_LEVEL = LOG_LEVEL_;
         vm.roll(1);

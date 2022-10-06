@@ -17,7 +17,7 @@ contract MockERC721UpgradeableTest is Helper {
     string constant _TEST_SYMBOL = 'MOCK';
 
     function setUp() public {
-        initialize_helper(LOG_LEVEL);
+        _initialize_helper(LOG_LEVEL);
         // Deploy contracts
         mockERC721Upgradeable = new MockERC721Upgradeable();
         mockERC721Upgradeable.initialize(_TEST_NAME, _TEST_SYMBOL);
