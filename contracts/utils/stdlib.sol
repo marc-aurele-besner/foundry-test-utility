@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity >=0.6.0 <0.9.0;
 
-import './Vm.sol';
+import './vm.sol';
 
 // Wrappers around Cheatcodes to avoid footguns
 abstract contract stdCheats {
