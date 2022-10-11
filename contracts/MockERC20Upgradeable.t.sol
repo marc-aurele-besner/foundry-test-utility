@@ -16,22 +16,22 @@ contract MockERC20UpgradeableTest is Helper {
     string constant _TEST_NAME = 'MockERC20Upgradeable';
     string constant _TEST_SYMBOL = 'MOCK';
 
-    function setUp() public {
+    function setUp() public virtual {
         _initialize_helper(LOG_LEVEL);
         // Deploy contracts
         mockERC20Upgradeable = new MockERC20Upgradeable();
         mockERC20Upgradeable.initialize(_TEST_NAME, _TEST_SYMBOL);
     }
 
-    function test_MockERC20Upgradeable_name() public {
+    function test_MockERC20Upgradeable_name() public virtual {
         assertEq(mockERC20Upgradeable.name(), _TEST_NAME);
     }
 
-    function test_MockERC20Upgradeable_symbol() public {
+    function test_MockERC20Upgradeable_symbol() public virtual {
         assertEq(mockERC20Upgradeable.symbol(), _TEST_SYMBOL);
     }
 
-    function test_MockERC20Upgradeable_mint(address to_, uint256 amount_) public {
+    function test_MockERC20Upgradeable_mint(address to_, uint256 amount_) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(amount_ > 0);
 
@@ -44,7 +44,7 @@ contract MockERC20UpgradeableTest is Helper {
         assertEq(mockERC20Upgradeable.totalSupply(), amount_);
     }
 
-    function test_MockERC20Upgradeable_burn(address to_, uint256 amount_) public {
+    function test_MockERC20Upgradeable_burn(address to_, uint256 amount_) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(amount_ > 0);
 

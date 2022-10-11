@@ -13,11 +13,11 @@ contract MockERC1155 is ERC1155 {
 
     constructor() ERC1155('https://google.com') {}
 
-    function name() public view returns (string memory) {
+    function name() public view virtual returns (string memory) {
         return _name;
     }
 
-    function symbol() public view returns (string memory) {
+    function symbol() public view virtual returns (string memory) {
         return _symbol;
     }
 
@@ -25,14 +25,14 @@ contract MockERC1155 is ERC1155 {
         address _to,
         uint256 _tokenId,
         uint256 _amount
-    ) public {
+    ) public virtual {
         require(_to != address(0));
         require(_tokenId > 0);
         require(_amount > 0);
         _mint(_to, _tokenId, _amount, '');
     }
 
-    function burn(uint256 _tokenId, uint256 _amount) public {
+    function burn(uint256 _tokenId, uint256 _amount) public virtual {
         _burn(_msgSender(), _tokenId, _amount);
     }
 }

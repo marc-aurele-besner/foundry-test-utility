@@ -20,13 +20,13 @@ contract MockERC721Upgradeable is ERC721Upgradeable {
         __ERC721_init(name_, symbol_);
     }
 
-    function mint(address _to, uint256 _tokenId) public {
+    function mint(address _to, uint256 _tokenId) public virtual {
         require(_to != address(0));
         require(_tokenId > 0);
         _mint(_to, _tokenId);
     }
 
-    function burn(uint256 _tokenId) public {
+    function burn(uint256 _tokenId) public virtual {
         require(_exists(_tokenId));
         _burn(_tokenId);
     }
