@@ -1,7 +1,7 @@
 {
     "name": "foundry-test-utility",
     "description": "Test utility for Foundry",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "license": "MIT",
     "files": [
         "/contracts/**/*.sol"
