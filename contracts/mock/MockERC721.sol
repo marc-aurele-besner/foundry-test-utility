@@ -10,13 +10,13 @@ import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
 contract MockERC721 is ERC721 {
     constructor() ERC721('MockERC721', 'MOCK') {}
 
-    function mint(address _to, uint256 _tokenId) public {
+    function mint(address _to, uint256 _tokenId) public virtual {
         require(_to != address(0));
         require(_tokenId > 0);
         _mint(_to, _tokenId);
     }
 
-    function burn(uint256 _tokenId) public {
+    function burn(uint256 _tokenId) public virtual {
         require(_exists(_tokenId));
         _burn(_tokenId);
     }

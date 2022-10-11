@@ -16,21 +16,21 @@ contract MockERC721Test is Helper {
     string constant _TEST_NAME = 'MockERC721';
     string constant _TEST_SYMBOL = 'MOCK';
 
-    function setUp() public {
+    function setUp() public virtual {
         _initialize_helper(LOG_LEVEL);
         // Deploy contracts
         mockERC721 = new MockERC721();
     }
 
-    function test_MockERC721_name() public {
+    function test_MockERC721_name() public virtual {
         assertEq(mockERC721.name(), _TEST_NAME);
     }
 
-    function test_MockERC721_symbol() public {
+    function test_MockERC721_symbol() public virtual {
         assertEq(mockERC721.symbol(), _TEST_SYMBOL);
     }
 
-    function test_MockERC721_mint(address to_, uint256 tokenId_) public {
+    function test_MockERC721_mint(address to_, uint256 tokenId_) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(tokenId_ > 0);
 
@@ -42,7 +42,7 @@ contract MockERC721Test is Helper {
         assertEq(mockERC721.ownerOf(tokenId_), to_);
     }
 
-    function test_MockERC721_burn(address to_, uint256 tokenId_) public {
+    function test_MockERC721_burn(address to_, uint256 tokenId_) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(tokenId_ > 0);
 

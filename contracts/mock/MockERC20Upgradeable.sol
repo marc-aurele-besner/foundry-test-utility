@@ -20,13 +20,13 @@ contract MockERC20Upgradeable is ERC20Upgradeable {
         __ERC20_init(name_, symbol_);
     }
 
-    function mint(address _to, uint256 _amount) public {
+    function mint(address _to, uint256 _amount) public virtual {
         require(_to != address(0));
         require(_amount > 0);
         _mint(_to, _amount);
     }
 
-    function burn(uint256 _amount) public {
+    function burn(uint256 _amount) public virtual {
         require(_amount > 0);
         _burn(_msgSender(), _amount);
     }

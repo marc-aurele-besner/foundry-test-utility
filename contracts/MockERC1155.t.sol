@@ -16,17 +16,17 @@ contract MockERC1155Test is Helper {
     string constant _TEST_NAME = 'MockERC1155';
     string constant _TEST_SYMBOL = 'MOCK';
 
-    function setUp() public {
+    function setUp() public virtual {
         _initialize_helper(LOG_LEVEL);
         // Deploy contracts
         mockERC1155 = new MockERC1155();
     }
 
-    function test_MockERC1155_name() public {
+    function test_MockERC1155_name() public virtual {
         assertEq(mockERC1155.name(), _TEST_NAME);
     }
 
-    function test_MockERC1155_symbol() public {
+    function test_MockERC1155_symbol() public virtual {
         assertEq(mockERC1155.symbol(), _TEST_SYMBOL);
     }
 
@@ -34,7 +34,7 @@ contract MockERC1155Test is Helper {
         address to_,
         uint256 tokenId_,
         uint256 amount_
-    ) public {
+    ) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(tokenId_ > 0);
         vm.assume(amount_ > 0);
@@ -50,7 +50,7 @@ contract MockERC1155Test is Helper {
         address to_,
         uint256 tokenId_,
         uint256 amount_
-    ) public {
+    ) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(tokenId_ > 0);
         vm.assume(amount_ > 0);

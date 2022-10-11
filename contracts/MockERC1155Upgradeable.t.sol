@@ -17,18 +17,18 @@ contract MockERC1155UpgradeableTest is Helper {
     string constant _TEST_SYMBOL = 'MOCK';
     string constant _TEST_URI = 'https://google.com';
 
-    function setUp() public {
+    function setUp() public virtual {
         _initialize_helper(LOG_LEVEL);
         // Deploy contracts
         mockERC1155Upgradeable = new MockERC1155Upgradeable();
         mockERC1155Upgradeable.initialize(_TEST_NAME, _TEST_SYMBOL, _TEST_URI);
     }
 
-    function test_MockERC1155Upgradeable_name() public {
+    function test_MockERC1155Upgradeable_name() public virtual {
         assertEq(mockERC1155Upgradeable.name(), _TEST_NAME);
     }
 
-    function test_MockERC1155Upgradeable_symbol() public {
+    function test_MockERC1155Upgradeable_symbol() public virtual {
         assertEq(mockERC1155Upgradeable.symbol(), _TEST_SYMBOL);
     }
 
@@ -36,7 +36,7 @@ contract MockERC1155UpgradeableTest is Helper {
         address to_,
         uint256 tokenId_,
         uint256 amount_
-    ) public {
+    ) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(tokenId_ > 0);
         vm.assume(amount_ > 0);
@@ -52,7 +52,7 @@ contract MockERC1155UpgradeableTest is Helper {
         address to_,
         uint256 tokenId_,
         uint256 amount_
-    ) public {
+    ) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(tokenId_ > 0);
         vm.assume(amount_ > 0);

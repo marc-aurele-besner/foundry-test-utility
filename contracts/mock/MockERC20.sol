@@ -10,13 +10,13 @@ import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
 contract MockERC20 is ERC20 {
     constructor() ERC20('MockERC20', 'MOCK') {}
 
-    function mint(address _to, uint256 _amount) public {
+    function mint(address _to, uint256 _amount) public virtual {
         require(_to != address(0));
         require(_amount > 0);
         _mint(_to, _amount);
     }
 
-    function burn(uint256 _amount) public {
+    function burn(uint256 _amount) public virtual {
         require(_amount > 0);
         _burn(_msgSender(), _amount);
     }

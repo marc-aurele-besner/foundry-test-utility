@@ -4,9 +4,9 @@ pragma solidity ^0.8.0;
 import '../utils/console.sol';
 import { CheatCodes } from '../utils/cheatcodes.sol';
 
-import { Constants } from './Constants.sol';
-import { Errors } from './Errors.sol';
-import { TestStorage } from './TestStorage.sol';
+import { Constants } from './constants.sol';
+import { Errors } from './errors.sol';
+import { TestStorage } from './testStorage.sol';
 
 contract Functions is Constants, Errors, TestStorage {
     enum TestType {

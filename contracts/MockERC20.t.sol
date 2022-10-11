@@ -16,21 +16,21 @@ contract MockERC20Test is Helper {
     string constant _TEST_NAME = 'MockERC20';
     string constant _TEST_SYMBOL = 'MOCK';
 
-    function setUp() public {
+    function setUp() public virtual {
         _initialize_helper(LOG_LEVEL);
         // Deploy contracts
         mockERC20 = new MockERC20();
     }
 
-    function test_MockERC20_name() public {
+    function test_MockERC20_name() public virtual {
         assertEq(mockERC20.name(), _TEST_NAME);
     }
 
-    function test_MockERC20_symbol() public {
+    function test_MockERC20_symbol() public virtual {
         assertEq(mockERC20.symbol(), _TEST_SYMBOL);
     }
 
-    function test_MockERC20_mint(address to_, uint256 amount_) public {
+    function test_MockERC20_mint(address to_, uint256 amount_) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(amount_ > 0);
 
@@ -43,7 +43,7 @@ contract MockERC20Test is Helper {
         assertEq(mockERC20.totalSupply(), amount_);
     }
 
-    function test_MockERC20_burn(address to_, uint256 amount_) public {
+    function test_MockERC20_burn(address to_, uint256 amount_) public virtual {
         vm.assume(to_ != address(0));
         vm.assume(amount_ > 0);
 
