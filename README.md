@@ -2,7 +2,7 @@
 
 # Foundry-Test-Utility
 
-This package aim to deliver a set of reusable contracts and helper function that can be reused and override in your own Foundry tests.
+This package aim to deliver a set of reusable contracts and helper function that can be reused and override in your own [Foundry](https://github.com/foundry-rs) tests.
 
 ## To add yo your project
 
@@ -34,3 +34,10 @@ For Forge Install
 foundry-test-utility/contracts/=libs/foundry-test-utility/contracts
 
 ```
+
+## Reference
+
+This repository include helper contracts from:
+
+- [Forge-std](https://github.com/foundry-rs/forge-std)
+- [DS-Test](https://github.com/dapphub/ds-test)
