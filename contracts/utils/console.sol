@@ -7,7 +7,7 @@ pragma solidity >=0.4.22 <0.9.0;
 // forge stack traces. If you do need compatibility with Hardhat, you must use `console.sol`.
 // Reference: https://github.com/NomicFoundation/hardhat/issues/2178
 
-library console2 {
+library console {
     address constant CONSOLE_ADDRESS = address(0x000000000000000000636F6e736F6c652e6c6f67);
 
     function _sendLogPayload(bytes memory payload) private view {
