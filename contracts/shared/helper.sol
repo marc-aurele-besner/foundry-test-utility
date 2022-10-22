@@ -5,8 +5,9 @@ import '../utils/console.sol';
 import { stdCheats as Cheats } from '../utils/stdlib.sol';
 
 import { Functions } from './functions.sol';
+import { Signatures } from './signatures.sol';
 
-contract Helper is Functions, Cheats {
+contract Helper is Functions, Signatures, Cheats {
     function _initialize_helper(uint8 LOG_LEVEL_, TestType testType_) internal virtual {
         // Deploy contracts
         Functions._initialize_tests(

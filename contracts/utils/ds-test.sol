@@ -53,25 +53,19 @@ contract DSTest {
         } else {
             bool globalFailed = false;
             if (hasHEVMContext()) {
-                 (, bytes memory retdata) = HEVM_ADDRESS.call(
-                    abi.encodePacked(
-                        bytes4(keccak256("load(address,bytes32)")),
-                        abi.encode(HEVM_ADDRESS, bytes32("failed"))
-                    )
+                (, bytes memory retdata) = HEVM_ADDRESS.call(
+                    abi.encodePacked(bytes4(keccak256('load(address,bytes32)')), abi.encode(HEVM_ADDRESS, bytes32('failed')))
                 );
                 globalFailed = abi.decode(retdata, (bool));
             }
             return globalFailed;
         }
-    } 
+    }
 
     function fail() internal {
         if (hasHEVMContext()) {
             (bool status, ) = HEVM_ADDRESS.call(
-                abi.encodePacked(
-                    bytes4(keccak256("store(address,bytes32,bytes32)")),
-                    abi.encode(HEVM_ADDRESS, bytes32("failed"), bytes32(uint256(0x01)))
-                )
+                abi.encodePacked(bytes4(keccak256('store(address,bytes32,bytes32)')), abi.encode(HEVM_ADDRESS, bytes32('failed'), bytes32(uint256(0x01))))
             );
             status; // Silence compiler warnings
         }
@@ -612,8 +606,8 @@ contract DSTest {
     function assertEq(string memory a, string memory b) internal {
         if (keccak256(abi.encodePacked(a)) != keccak256(abi.encodePacked(b))) {
             emit log('Error: a == b not satisfied [string]');
-            emit log_named_string("  Expected", b);
-            emit log_named_string("    Actual", a);
+            emit log_named_string('  Expected', b);
+            emit log_named_string('    Actual', a);
             fail();
         }
     }
@@ -645,8 +639,8 @@ contract DSTest {
     function assertEq0(bytes memory a, bytes memory b) internal {
         if (!checkEq0(a, b)) {
             emit log('Error: a == b not satisfied [bytes]');
-            emit log_named_bytes("  Expected", b);
-            emit log_named_bytes("    Actual", a);
+            emit log_named_bytes('  Expected', b);
+            emit log_named_bytes('    Actual', a);
             fail();
         }
     }

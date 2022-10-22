@@ -7,8 +7,8 @@ import { DSTest } from '../utils/test.sol';
 contract Errors is DSTest {
     Vm public constant vm = Vm(address(uint160(uint256(keccak256('hevm cheat code')))));
 
-    string constant public REVERT_STATUS_SUCCESS = '[success]';
-    string constant public REVERT_STATUS_SKI_VALIDATION = '[skip]';
+    string public constant REVERT_STATUS_SUCCESS = '[success]';
+    string public constant REVERT_STATUS_SKI_VALIDATION = '[skip]';
 
     string[] internal _errors;
 
@@ -27,12 +27,12 @@ contract Errors is DSTest {
             }
         }
     }
-    
+
     /**
-    * @dev Validate string match a other string (A==B)
-    * @param strA - String A
-    * @param strB - String B
-    */
+     * @dev Validate string match a other string (A==B)
+     * @param strA - String A
+     * @param strB - String B
+     */
     function _validateString(string calldata strA, string memory strB) internal pure virtual returns (bool) {
         return keccak256(abi.encodePacked(strA)) == keccak256(abi.encodePacked(strB));
     }

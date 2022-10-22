@@ -1,6 +1,6 @@
 [![license](https://img.shields.io/github/license/jamesisaac/react-native-background-task.svg)](https://opensource.org/licenses/MIT)
 
-# foundry-test-utility / contracts / shared
+# foundry-test-utility / contracts
 
 ```
 
@@ -14,25 +14,34 @@ ______                    _                _______        _          _    _ _   
                                     |___/                                                    |___/
 ```
 
--   [constants.sol](./constants.sol)
--   [errors.sol](./errors.sol)
--   [functions.sol](./functions.sol)
--   [helper.sol](./helper.sol)
+## Directories
+
+-   [mock/](./mock/)
+-   [shared/](./shared/)
+-   [utils/](./utils/)
+
+-   [MockERC1155.t.sol](./MockERC1155.t.sol)
+-   [MockERC1155Upgradeable.t.sol](./MockERC1155Upgradeable.t.sol)
+-   [MockERC20.t.sol](./MockERC20.t.sol)
+-   [MockERC20Upgradeable.t.sol](./MockERC20Upgradeable.t.sol)
+-   [MockERC721.t.sol](./MockERC721.t.sol)
+-   [MockERC721Upgradeable.t.sol](./MockERC721Upgradeable.t.sol)
 -   [README.md](./README.md)
--   [signatures.sol](./signatures.sol)
--   [testStorage.sol](./testStorage.sol)
 
 ## Directory Tree
 
 [<- Previous](https://github.com/marc-aurele-besner/foundry-test-utility)
 
 ```
-shared/
-   │   constants.sol
-   │   errors.sol
-   │   functions.sol
-   │   helper.sol
+contracts/
+   │   MockERC1155.t.sol
+   │   MockERC1155Upgradeable.t.sol
+   │   MockERC20.t.sol
+   │   MockERC20Upgradeable.t.sol
+   │   MockERC721.t.sol
+   │   MockERC721Upgradeable.t.sol
    │   README.md
-   │   signatures.sol
-   │   testStorage.sol
+   └─── mock/
+   └─── shared/
+   └─── utils/
 ```
