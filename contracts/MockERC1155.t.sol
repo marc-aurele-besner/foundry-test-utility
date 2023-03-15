@@ -4,11 +4,12 @@ pragma solidity >=0.8.0 <0.9.0;
 /**
  * @title MockERC1155 - Test
  */
+import '@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol';
 
 import { Helper } from './shared/helper.sol';
 import { MockERC1155 } from './mock/MockERC1155.sol';
 
-contract MockERC1155Test is Helper {
+contract MockERC1155Test is Helper, IERC721ReceiverUpgradeable {
     uint8 LOG_LEVEL = 0;
 
     MockERC1155 private mockERC1155;
@@ -20,6 +21,15 @@ contract MockERC1155Test is Helper {
         _initialize_helper(LOG_LEVEL);
         // Deploy contracts
         mockERC1155 = new MockERC1155();
+    }
+
+    function onERC721Received(
+        address,
+        address,
+        uint256,
+        bytes memory
+    ) public virtual override returns (bytes4) {
+        return this.onERC721Received.selector;
     }
 
     function test_MockERC1155_name() public virtual {
@@ -35,7 +45,7 @@ contract MockERC1155Test is Helper {
         uint256 tokenId_,
         uint256 amount_
     ) public virtual {
-        vm.assume(to_ != address(0));
+        vm.assume(to_ != address(0) && to_.code.length == 0);
         vm.assume(tokenId_ > 0);
         vm.assume(amount_ > 0);
 
@@ -51,7 +61,7 @@ contract MockERC1155Test is Helper {
         uint256 tokenId_,
         uint256 amount_
     ) public virtual {
-        vm.assume(to_ != address(0));
+        vm.assume(to_ != address(0) && to_.code.length == 0);
         vm.assume(tokenId_ > 0);
         vm.assume(amount_ > 0);
 

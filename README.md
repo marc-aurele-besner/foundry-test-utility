@@ -21,19 +21,19 @@ This package aim to deliver a set of reusable contracts and helper function that
 
 First install the package using NPM, Yarn or Forge Install.
 
-```
+```bash
 npm i foundry-test-utility
 ```
 
 or
 
-```
+```bash
 yarn add foundry-test-utility
 ```
 
 or
 
-```
+```bash
 foundry install marc-aurele-besner/foundry-test-utility
 ```
 
@@ -41,13 +41,13 @@ Then add this package path in remapping.text
 
 For NPM/Yarn
 
-```
+```bash
 foundry-test-utility/contracts/=node_modules/foundry-test-utility/contracts
 ```
 
 For Forge Install
 
-```
+```bash
 foundry-test-utility/contracts/=libs/foundry-test-utility/contracts
 
 ```
@@ -59,14 +59,15 @@ foundry-test-utility/contracts/=libs/foundry-test-utility/contracts
 -   [.npmignore](./.npmignore)
 -   [.prettierignore](./.prettierignore)
 -   [.prettierrc](./.prettierrc)
--   [awesome-readme.config.js](./awesome-readme.config.js)
 -   [CONTRIBUTING.md](./CONTRIBUTING.md)
--   [foundry.toml](./foundry.toml)
 -   [LICENSE](./LICENSE)
+-   [README.md](./README.md)
+-   [awesome-readme.config.js](./awesome-readme.config.js)
+-   [foundry.toml](./foundry.toml)
 -   [package-lock.json](./package-lock.json)
 -   [package.json](./package.json)
--   [README.md](./README.md)
 -   [remappings.txt](./remappings.txt)
+-   [renovate.json](./renovate.json)
 
 ## Reference
 
@@ -82,14 +83,15 @@ foundry-test-utility/
 │   .npmignore
 │   .prettierignore
 │   .prettierrc
-│   awesome-readme.config.js
 │   CONTRIBUTING.md
-│   foundry.toml
 │   LICENSE
+│   README.md
+│   awesome-readme.config.js
+│   foundry.toml
 │   package-lock.json
 │   package.json
-│   README.md
 │   remappings.txt
+│   renovate.json
 └─── contracts/
    │   MockERC1155.t.sol
    │   MockERC1155Upgradeable.t.sol
@@ -98,6 +100,7 @@ foundry-test-utility/
    │   MockERC721.t.sol
    │   MockERC721Upgradeable.t.sol
    │   README.md
+   └─── interfaces/
    └─── mock/
    └─── shared/
    └─── utils/
