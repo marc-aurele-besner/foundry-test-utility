@@ -1,6 +1,6 @@
 [![license](https://img.shields.io/github/license/jamesisaac/react-native-background-task.svg)](https://opensource.org/licenses/MIT)
 
-# foundry-test-utility / contracts / shared
+# foundry-test-utility / contracts / interfaces
 
 ```
 
@@ -14,25 +14,25 @@ ______                    _                _______        _          _    _ _   
                                     |___/                                                    |___/
 ```
 
+-   [IERC1155.sol](./IERC1155.sol)
+-   [IERC165.sol](./IERC165.sol)
+-   [IERC20.sol](./IERC20.sol)
+-   [IERC4626.sol](./IERC4626.sol)
+-   [IERC721.sol](./IERC721.sol)
+-   [IMulticall3.sol](./IMulticall3.sol)
 -   [README.md](./README.md)
--   [constants.sol](./constants.sol)
--   [errors.sol](./errors.sol)
--   [functions.sol](./functions.sol)
--   [helper.sol](./helper.sol)
--   [signatures.sol](./signatures.sol)
--   [testStorage.sol](./testStorage.sol)
 
 ## Directory Tree
 
 [<- Previous](https://github.com/marc-aurele-besner/foundry-test-utility)
 
 ```
-shared/
+interfaces/
+   │   IERC1155.sol
+   │   IERC165.sol
+   │   IERC20.sol
+   │   IERC4626.sol
+   │   IERC721.sol
+   │   IMulticall3.sol
    │   README.md
-   │   constants.sol
-   │   errors.sol
-   │   functions.sol
-   │   helper.sol
-   │   signatures.sol
-   │   testStorage.sol
 ```

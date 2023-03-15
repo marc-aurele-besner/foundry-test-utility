@@ -16,6 +16,7 @@ ______                    _                _______        _          _    _ _   
 
 ## Directories
 
+-   [interfaces/](./interfaces/)
 -   [mock/](./mock/)
 -   [shared/](./shared/)
 -   [utils/](./utils/)
@@ -41,6 +42,7 @@ contracts/
    │   MockERC721.t.sol
    │   MockERC721Upgradeable.t.sol
    │   README.md
+   └─── interfaces/
    └─── mock/
    └─── shared/
    └─── utils/

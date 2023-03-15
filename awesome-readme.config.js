@@ -17,19 +17,19 @@ This package aim to deliver a set of reusable contracts and helper function that
 
 First install the package using NPM, Yarn or Forge Install.
 
-\`\`\`
+\`\`\`bash
 npm i foundry-test-utility
 \`\`\`
 
 or
 
-\`\`\`
+\`\`\`bash
 yarn add foundry-test-utility
 \`\`\`
 
 or
 
-\`\`\`
+\`\`\`bash
 foundry install marc-aurele-besner/foundry-test-utility
 \`\`\`
 
@@ -37,13 +37,13 @@ Then add this package path in remapping.text
 
 For NPM/Yarn
 
-\`\`\`
+\`\`\`bash
 foundry-test-utility/contracts/=node_modules/foundry-test-utility/contracts
 \`\`\`
 
 For Forge Install
 
-\`\`\`
+\`\`\`bash
 foundry-test-utility/contracts/=libs/foundry-test-utility/contracts
 
 \`\`\`
