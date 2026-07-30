@@ -29,7 +29,7 @@
     "devDependencies": {
         "@openzeppelin/contracts": "^4.7.3",
         "@openzeppelin/contracts-upgradeable": "^4.8.0-rc.1",
-        "awesome-readme": "^0.0.8",
+        "awesome-readme": "^1.0.0",
         "prettier": "^3.0.0",
         "prettier-plugin-solidity": "^2.0.0"
     }
