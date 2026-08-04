@@ -1,0 +1,8 @@
+{
+    "errors": [
+        "ERC20InsufficientBalance",
+        "ERC20InsufficientAllowance",
+        "OwnableUnauthorizedAccount",
+        "AccessControlUnauthorizedAccount"
+    ]
+}
