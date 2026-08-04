@@ -4,12 +4,12 @@ pragma solidity >=0.8.0 <0.9.0;
 /**
  * @title MockERC1155Upgradeable - Test
  */
-import '@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol';
+import '@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol';
 
 import { Helper } from './shared/helper.sol';
 import { MockERC1155Upgradeable } from './mock/MockERC1155Upgradeable.sol';
 
-contract MockERC1155UpgradeableTest is Helper, IERC721ReceiverUpgradeable {
+contract MockERC1155UpgradeableTest is Helper, IERC721Receiver {
     uint8 LOG_LEVEL = 0;
 
     MockERC1155Upgradeable private mockERC1155Upgradeable;
