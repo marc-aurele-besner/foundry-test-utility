@@ -1,3 +1,5 @@
 node_modules
 artifacts
 cache
+constants/constants.json
+constants/errors.json

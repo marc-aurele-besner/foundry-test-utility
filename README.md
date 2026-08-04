@@ -55,6 +55,7 @@ foundry-test-utility/contracts/=libs/foundry-test-utility/contracts
 ## Directories
 
 -   [contracts/](./contracts/)
+-   [constants/](./constants/)
 
 -   [.npmignore](./.npmignore)
 -   [.prettierignore](./.prettierignore)
@@ -76,6 +77,14 @@ This repository include helper contracts from:
 -   [Forge-std](https://github.com/foundry-rs/forge-std)
 -   [DS-Test](https://github.com/dapphub/ds-test)
 
+## Optional JSON configuration
+
+The `Constants` and `Errors` base contracts in
+[`contracts/shared/`](./contracts/shared/) accept an optional JSON configuration
+loaded from [`./constants/`](./constants/) at construction time. See
+[`./constants/README.md`](./constants/README.md) for the expected file format.
+When the files are missing, the hard-coded defaults are used.
+
 ## Directory Tree
 
 ```
@@ -92,7 +101,12 @@ foundry-test-utility/
 │   package.json
 │   remappings.txt
 │   renovate.json
+├── constants/
+│   │   README.md
+│   │   constants.example.json
+│   │   errors.example.json
 └─── contracts/
+   │   ConstantsAndErrors.t.sol
    │   MockERC1155.t.sol
    │   MockERC1155Upgradeable.t.sol
    │   MockERC20.t.sol
